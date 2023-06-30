@@ -1,0 +1,218 @@
+.
+├── config
+│   └── conf.php
+├── controller
+│   ├── AdminController.php
+│   ├── AuthController.php
+│   ├── ChampionnatController.php
+│   ├── ClassementController.php
+│   ├── DefautController.php
+│   ├── InfoController.php
+│   ├── JoueurController.php
+│   ├── RencontreController.php
+│   ├── SimulationJoueurController.php
+│   ├── detail.php
+│   └── liste.php
+├── core
+│   ├── Controller.php
+│   ├── Dispatcher.php
+│   ├── MailConfig.php
+│   ├── Model.php
+│   ├── PHPMailer
+│   │   ├── Exception.php
+│   │   ├── OAuth.php
+│   │   ├── OAuthTokenProvider.php
+│   │   ├── PHPMailer.php
+│   │   ├── POP3.php
+│   │   ├── SMTP.php
+│   │   └── phpmailer.lang-fr.php
+│   ├── Request.php
+│   ├── Router.php
+│   ├── Session.php
+│   └── includes.php
+├── json
+│   ├── champion.json
+│   └── objet.json
+├── localhost.sql
+├── model
+│   ├── Arbitre.php
+│   ├── Championnat.php
+│   ├── Classement.php
+│   ├── Club.php
+│   ├── Compte.php
+│   ├── DetailMatch.php
+│   ├── Division.php
+│   ├── Engagement.php
+│   ├── Equipe.php
+│   ├── EquipeRencontre.php
+│   ├── Joueur.php
+│   ├── Journee.php
+│   ├── Personne.php
+│   ├── Poule.php
+│   ├── Remplacement.php
+│   ├── Rencontre.php
+│   └── SimulationJoueur.php
+├── nbproject
+│   ├── private
+│   │   ├── config.properties
+│   │   ├── private.properties
+│   │   └── private.xml
+│   ├── project.properties
+│   └── project.xml
+├── resultats
+│   ├── Division2A
+│   │   ├── Feuille de match JN N°1-Division 2A BORDS 2 - BORDS 4.pdf
+│   │   ├── Feuille de match JN N°1-Division 2A BURIE 1 - ST HIPPO 3.pdf
+│   │   ├── Feuille de match JN N°1-Division 2A ST HIPPOLYTE 1 - BENON 3.pdf
+│   │   ├── Feuille de match JN N°2-Division 2A BENON 3 - ST HIPPO 3 X.jpg
+│   │   ├── Feuille de match JN N°2-Division 2A BENON 3 - ST HIPPO 3.jpg
+│   │   ├── Feuille de match JN N°2-Division 2A BORDS 4 - CTT BURIE.pdf
+│   │   ├── Feuille de match JN N°2-Division 2A ST HIPPO 1 - BORDS 2 X.pdf
+│   │   ├── Feuille de match JN N°2-Division 2A ST HIPPO 1 - BORDS 2.pdf
+│   │   ├── Feuille de match JN N°3-Division 2A BENON 3-BORDS 2.pdf
+│   │   ├── Feuille de match JN N°3-Division 2A CTT BURIE-St HIPPO X.pdf
+│   │   ├── Feuille de match JN N°3-Division 2A CTT BURIE-St HIPPO.pdf
+│   │   ├── Feuille de match JN N°4-Division 2A BORDS 2 - St HIPPO 3 X.pdf
+│   │   ├── Feuille de match JN N°4-Division 2A CTT BURIE- BENON 3.pdf
+│   │   ├── Feuille de match JN N°4-Division 2A ST HIPOLYTE 1-BORDS 4.pdf
+│   │   └── JN N°8-Division 2A BORDS 2 - BENON 3.pdf
+│   ├── Division2B
+│   │   ├── Feuille de match JN N°1-Division 2B BREUIL-MAGNE 2 - BORDS 1.pdf
+│   │   ├── Feuille de match JN N°1-Division 2B ST HIPPOLYTE 2 - BORDS 3.pdf
+│   │   ├── Feuille de match JN N°2-Division 2B BREUIL-MAGNE 2 - BORDS 3.pdf
+│   │   ├── Feuille de match JN N°2-Division 2B LOISIRS SOLINOIS 2-ST HIPP.pdf
+│   │   ├── Feuille de match JN N°3-Division 2B BORDS 3-BORDS 1.pdf
+│   │   ├── Feuille de match JN N°4-Division 2B ST HIPPO 2-BREUIL-MAG 2 X.pdf
+│   │   ├── Feuille de match JN N°4-Division 2B ST HIPPO 2-BREUIL-MAGNE 2.pdf
+│   │   └── Feuille de match JN N°7-Division 2B BREUIL-MAGNE 2 - BORDS 3.pdf
+│   ├── Feuille de match JN N°1-Division 1 BENON 1-BENON 2.pdf
+│   ├── Feuille de match JN N°1-Division 1 SMASH-BREUIL-MAGNE 1.pdf
+│   ├── Feuille de match JN N°1-Division 1-LOISIRS SOLINOIS - MARANS X.pdf
+│   ├── Feuille de match JN N°1-Division 2A BORDS 2 - BORDS 4.pdf
+│   ├── Feuille de match JN N°1-Division 2A BURIE 1 - ST HIPPO 3.pdf
+│   ├── Feuille de match JN N°1-Division 2A ST HIPPOLYTE 1 - BENON 3.pdf
+│   ├── Feuille de match JN N°1-Division 2B BREUIL-MAGNE 2 - BORDS 1.pdf
+│   ├── Feuille de match JN N°1-Division 2B ST HIPPOLYTE 2 - BORDS 3.pdf
+│   ├── Feuille de match JN N°2-Division 1 BENON 1-SMASH 1.pdf
+│   ├── Feuille de match JN N°2-Division 1 BENON 1-SMASH.pdf
+│   ├── Feuille de match JN N°2-Division 1 BREUIL-MAGNE 1 - LOISIRS S.pdf
+│   ├── Feuille de match JN N°2-Division 2A BENON 3 - ST HIPPO 3 X.jpg
+│   ├── Feuille de match JN N°2-Division 2A BENON 3 - ST HIPPO 3.jpg
+│   ├── Feuille de match JN N°2-Division 2A BORDS 4 - CTT BURIE.pdf
+│   ├── Feuille de match JN N°2-Division 2A ST HIPPO 1 - BORDS 2 X.pdf
+│   ├── Feuille de match JN N°2-Division 2A ST HIPPO 1 - BORDS 2.pdf
+│   ├── Feuille de match JN N°2-Division 2B BREUIL-MAGNE 2 - BORDS 3.pdf
+│   ├── Feuille de match JN N°2-Division 2B LOISIRS SOLINOIS 2-ST HIPP.pdf
+│   ├── Feuille de match JN N°3-Division 1 BENON 2-LOISIRS SOLINOIS 1.pdf
+│   ├── Feuille de match JN N°3-Division 1 BENON 2-LOISIRS SOLINOIS X.pdf
+│   ├── Feuille de match JN N°3-Division 1 SMASH-MARANS 1 X.pdf
+│   ├── Feuille de match JN N°3-Division 2A BENON 3-BORDS 2.pdf
+│   ├── Feuille de match JN N°3-Division 2A CTT BURIE-St HIPPO X.pdf
+│   ├── Feuille de match JN N°3-Division 2A CTT BURIE-St HIPPO.pdf
+│   ├── Feuille de match JN N°3-Division 2B BORDS 3-BORDS 1.pdf
+│   ├── Feuille de match JN N°4-Division 1 BENON 1-MARANS 1 X.jpg
+│   ├── Feuille de match JN N°4-Division 1 LOISIRS SOLINOIS 1-SMASH.pdf
+│   ├── Feuille de match JN N°4-Division 2A BORDS 2 - St HIPPO 3 X.pdf
+│   ├── Feuille de match JN N°4-Division 2A CTT BURIE- BENON 3.pdf
+│   ├── Feuille de match JN N°4-Division 2A ST HIPOLYTE 1-BORDS 4.pdf
+│   ├── Feuille de match JN N°4-Division 2B ST HIPPO 2-BREUIL-MAG 2 X.pdf
+│   ├── Feuille de match JN N°4-Division 2B ST HIPPO 2-BREUIL-MAGNE 2.pdf
+│   ├── Feuilles de matchs 1.zip
+│   ├── Feuilles de matchs N°2.zip
+│   ├── Feuilles de matchs N°3.zip
+│   ├── JN N°7-Division 1 SMASH - BENON 1.pdf
+│   ├── JN N°8-Division 1 SMASH - MARANS.pdf
+│   ├── Match-marans-BreuilM.pdf
+│   ├── Matchs BM1 et BM2 journée 3 et 4.pdf
+│   ├── RE UFOLEP  Tennis de Table  Calendrier définitif.zip
+│   ├── Résultats Départemental TT B 2019-2020-CLUBS_compressed.pdf
+│   ├── Résultats TT UFOLEP(1).zip
+│   ├── Résultats TT UFOLEP(2).zip
+│   ├── Résultats TT UFOLEP.zip
+│   └── Ufolep-T2T-Feuille de match -18-10-2019-BM2-Bords1.pdf
+├── scripts
+│   ├── ArrayWizard.php
+│   ├── IP.php
+│   ├── Parser.php
+│   └── Security.php
+├── test.txt
+├── view
+│   ├── admin
+│   │   ├── deletePersonne.php
+│   │   ├── deleteUtilisateur.php
+│   │   ├── demoScan.java
+│   │   ├── formChampionnat.php
+│   │   ├── formCsv.php
+│   │   ├── formEquipe.php
+│   │   ├── formJoueur.php
+│   │   ├── formJournee.php
+│   │   ├── formPersonne.php
+│   │   ├── formRencontre (fige).php
+│   │   ├── formRencontre.php
+│   │   ├── formRencontreDetail.php
+│   │   ├── formRencontreDetailSMASH.php
+│   │   ├── formRencontreGen.php
+│   │   ├── formRencontreLibre.php
+│   │   ├── formRencontreSMASH.php
+│   │   ├── formRencontreSimple.php
+│   │   ├── formUtilisateur.php
+│   │   ├── listeChampionnat.php
+│   │   ├── listeEquipe.php
+│   │   ├── listeJoueur.php
+│   │   ├── listeJournee.php
+│   │   ├── listePersonne.php
+│   │   ├── listeRencontre.php
+│   │   ├── listeUtilisateur.php
+│   │   ├── modifChampionnat.php
+│   │   └── tableauJavascript.html
+│   ├── auth
+│   │   ├── login.php
+│   │   └── logout.php
+│   ├── championnat
+│   │   ├── ancienneListe.php
+│   │   └── liste.php
+│   ├── classement
+│   │   ├── classementPoule.php
+│   │   └── liste.php
+│   ├── errors
+│   │   └── 404.php
+│   ├── info
+│   │   ├── contact.php
+│   │   └── rgpd.php
+│   ├── joueur
+│   │   ├── detail.php
+│   │   ├── liste.php
+│   │   └── modif.php
+│   ├── layout
+│   │   ├── admin
+│   │   │   ├── __admin_menu.php
+│   │   │   ├── _admin_bottom.php
+│   │   │   └── _admin_top.php
+│   │   ├── default.php
+│   │   ├── footer.php
+│   │   └── guest
+│   │       ├── _guest_bottom.php
+│   │       └── _guest_top.php
+│   ├── rencontre
+│   │   ├── detail.php
+│   │   ├── detailAncien.php
+│   │   ├── liste.php
+│   │   ├── listeAVerifier.php
+│   │   └── listeEquipePoule.php
+│   └── simulationJoueur
+│       ├── formSimulation.php
+│       └── listeSimulation.php
+└── webroot
+    ├── bootstrap
+    │   └── bootstrap.css
+    ├── css
+    │   ├── fonts.css
+    │   ├── footer.css
+    │   ├── header.css
+    │   └── main.css
+    ├── img
+    │   ├── favicon.ico
+    │   └── logo_site.png
+    └── index.php
+
+29 directories, 186 files

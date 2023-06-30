@@ -1,0 +1,311 @@
+<script type="text/javascript">  
+  function calculScore() {
+	//alert("OK");
+	var feuille = document.getElementById("feuilleDeMatch").rows;
+	
+	document.getElementById("calcul").style.color = "red";
+	var nbMatchs = feuille.length-2;
+	//alert("recup = "+nbMatchs);
+	console.log("nb lignes = "+nbMatchs);
+	var scoreA = 0;
+	var scoreB = 0;
+	var vainqueur=new Array();;
+	for(var i=1;i<nbMatchs;i++) {
+		vainqueur[i]=0; 
+		var colonnes = feuille[i].cells;//on récupère les cellules de la ligne
+		//var largeur = colonnes.length;
+		//console.log("nb colonnes = "+largeur);
+		//for(var j=0; j<largeur; j++) {
+		for(var j=2; j<7; j++) {
+		 
+			var recup = colonnes[j].firstElementChild.value;
+			console.log("match["+i+","+(j-1)+"] = "+recup);
+			if(recup<0) {
+				vainqueur[i]--;
+								
+			}
+			else 
+				{
+					vainqueur[i]++;
+					
+				}
+		}	
+		console.log("vainqueur du match["+i+","+(j-1)+"] = "+vainqueur[i]);
+		if(vainqueur[i]<0) {
+				
+				colonnes[j++].innerHTML=0;	
+				colonnes[j].innerHTML=1;
+				scoreB++;
+			}
+			else {
+				colonnes[j++].innerHTML=1;	
+				colonnes[j].innerHTML=0;
+				scoreA++;
+			}
+			console.log("score match["+i+","+j+"] = "+scoreA+" ----- "+scoreB);
+	}
+	var colonnes = feuille[i].cells;//on récupère les cellules de la ligne
+	for(var j=1; j<6; j++) {
+		//var recup = colonnes[j].firstElementChild.value
+	var recup = colonnes[j].firstElementChild.value;
+			console.log("match["+i+","+(j-1)+"] = "+recup);
+			if(recup<0) {
+				vainqueur[i]--;
+				
+				
+			}
+			else 
+				 {
+					vainqueur[i]++;
+					
+				}
+		
+	
+	}
+	console.log("vainqueur du match["+i+","+(j-1)+"] = "+vainqueur[i]);
+	if(vainqueur[i]<0) {
+				
+				scoreB++;
+				colonnes[j++].innerHTML=0;	
+				colonnes[j].innerHTML=1;
+			}
+			else {
+				
+					scoreA++;
+					colonnes[j++].innerHTML=1;	
+					colonnes[j].innerHTML=0;
+				}
+	//alert("sortie de boucle");
+	console.log("score final = "+scoreA+" ----- "+scoreB);
+	document.getElementById("scoreA").innerHTML=scoreA;
+	document.getElementById("scoreB").innerHTML=scoreB;	
+	}
+</script>
+<table border='1'class="data-table sober" id="feuilleDeMatch">
+        <thead>          
+            <th>    Joueurs ABC    </th>
+            <th>    Joueurs XYZ    </th>
+            <th>Manche1</th>
+            <th>Manche2</th>
+            <th>Manche3</th>
+            <th>Manche4</th>
+            <th>Manche5</th>
+            <th>Points ABC</th>
+            <th>Points XYZ</th>
+        </thead>
+         
+      <tr>
+                <td>						<!--// ajout 27/08/2020  -->
+						<input type="hidden" name="ligneMatch[]" value="172" />
+					    GAUTIER Benjamin                </td>
+                <td>
+                    FAVREAU Didier                </td>
+				<!-- ajout 26/08/2020  -->
+				<!--
+                <td>0 / 0</td>
+                <td>0 / 0</td>
+                <td>0 / 0</td>
+                <td>-</td>
+                <td>-</td>  -->
+				<td><input class="form-control" type="number" id="m1" name="m1[]" value="0" size="3" required/></td>
+                <td><input class="form-control" type="number" id="m2" name="m2[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m3" name="m3[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m4" name="m4[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m5" name="m5[]" value="0" size="3" required/></td>
+                <td><p id="pointsA">-</p></td>
+                <td><p id="pointsB">-</p></td>
+			</tr>
+         
+            <tr>
+                <td>						<!--// ajout 27/08/2020  -->
+						<input type="hidden" name="ligneMatch[]" value="173" />
+					    BAROCHE Samuel                </td>
+                <td>
+                    BONNEAU Catherine                </td>
+				<!-- ajout 26/08/2020  -->
+				<!--
+                <td>0 / 0</td>
+                <td>0 / 0</td>
+                <td>0 / 0</td>
+                <td>-</td>
+                <td>-</td>  -->
+				<td><input class="form-control" type="number" id="m1" name="m1[]" value="0" size="3" required/></td>
+                <td><input class="form-control" type="number" id="m2" name="m2[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m3" name="m3[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m4" name="m4[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m5" name="m5[]" value="0" size="3" required/></td>
+                <td><p id="pointsA">-</p></td>
+                <td><p id="pointsB">-</p></td>
+			</tr>
+         
+            <tr>
+                <td>						<!--// ajout 27/08/2020  -->
+						<input type="hidden" name="ligneMatch[]" value="174" />
+					    BRACHET Sébastien                </td>
+                <td>
+                    BATIOT Thierry                </td>
+				<!-- ajout 26/08/2020  -->
+				<!--
+                <td>0 / 0</td>
+                <td>0 / 0</td>
+                <td>0 / 0</td>
+                <td>-</td>
+                <td>-</td>  -->
+				<td><input class="form-control" type="number" id="m1" name="m1[]" value="0" size="3" required/></td>
+                <td><input class="form-control" type="number" id="m2" name="m2[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m3" name="m3[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m4" name="m4[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m5" name="m5[]" value="0" size="3" required/></td>
+                <td><p id="pointsA">-</p></td>
+                <td><p id="pointsB">-</p></td>
+			</tr>
+         
+            <tr>
+                <td>						<!--// ajout 27/08/2020  -->
+						<input type="hidden" name="ligneMatch[]" value="175" />
+					    GAUTIER Benjamin                </td>
+                <td>
+                    BONNEAU Catherine                </td>
+				<!-- ajout 26/08/2020  -->
+				<!--
+                <td>0 / 0</td>
+                <td>0 / 0</td>
+                <td>0 / 0</td>
+                <td>-</td>
+                <td>-</td>  -->
+				<td><input class="form-control" type="number" id="m1" name="m1[]" value="0" size="3" required/></td>
+                <td><input class="form-control" type="number" id="m2" name="m2[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m3" name="m3[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m4" name="m4[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m5" name="m5[]" value="0" size="3" required/></td>
+                <td><p id="pointsA">-</p></td>
+                <td><p id="pointsB">-</p></td>
+			</tr>
+         
+            <tr>
+                <td>						<!--// ajout 27/08/2020  -->
+						<input type="hidden" name="ligneMatch[]" value="176" />
+					    BAROCHE Samuel                </td>
+                <td>
+                    BATIOT Thierry                </td>
+				<!-- ajout 26/08/2020  -->
+				<!--
+                <td>0 / 0</td>
+                <td>0 / 0</td>
+                <td>0 / 0</td>
+                <td>-</td>
+                <td>-</td>  -->
+				<td><input class="form-control" type="number" id="m1" name="m1[]" value="0" size="3" required/></td>
+                <td><input class="form-control" type="number" id="m2" name="m2[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m3" name="m3[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m4" name="m4[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m5" name="m5[]" value="0" size="3" required/></td>
+                <td><p id="pointsA">-</p></td>
+                <td><p id="pointsB">-</p></td>
+			</tr>
+         
+            <tr>
+                <td>						<!--// ajout 27/08/2020  -->
+						<input type="hidden" name="ligneMatch[]" value="177" />
+					    BRACHET Sébastien                </td>
+                <td>
+                    FAVREAU Didier                </td>
+				<!-- ajout 26/08/2020  -->
+				<!--
+                <td>0 / 0</td>
+                <td>0 / 0</td>
+                <td>0 / 0</td>
+                <td>-</td>
+                <td>-</td>  -->
+				<td><input class="form-control" type="number" id="m1" name="m1[]" value="0" size="3" required/></td>
+                <td><input class="form-control" type="number" id="m2" name="m2[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m3" name="m3[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m4" name="m4[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m5" name="m5[]" value="0" size="3" required/></td>
+                <td><p id="pointsA">-</p></td>
+                <td><p id="pointsB">-</p></td>
+			</tr>
+         
+            <tr>
+                <td>						<!--// ajout 27/08/2020  -->
+						<input type="hidden" name="ligneMatch[]" value="178" />
+					    GAUTIER Benjamin                </td>
+                <td>
+                    BATIOT Thierry                </td>
+				<!-- ajout 26/08/2020  -->
+				<!--
+                <td>0 / 0</td>
+                <td>0 / 0</td>
+                <td>0 / 0</td>
+                <td>-</td>
+                <td>-</td>  -->
+				<td><input class="form-control" type="number" id="m1" name="m1[]" value="0" size="3" required/></td>
+                <td><input class="form-control" type="number" id="m2" name="m2[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m3" name="m3[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m4" name="m4[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m5" name="m5[]" value="0" size="3" required/></td>
+                <td><p id="pointsA">-</p></td>
+                <td><p id="pointsB">-</p></td>
+			</tr>
+         
+            <tr>
+                <td>						<!--// ajout 27/08/2020  -->
+						<input type="hidden" name="ligneMatch[]" value="179" />
+					    BAROCHE Samuel                </td>
+                <td>
+                    FAVREAU Didier                </td>
+				<!-- ajout 26/08/2020  -->
+				<!--
+                <td>0 / 0</td>
+                <td>0 / 0</td>
+                <td>0 / 0</td>
+                <td>-</td>
+                <td>-</td>  -->
+				<td><input class="form-control" type="number" id="m1" name="m1[]" value="0" size="3" required/></td>
+                <td><input class="form-control" type="number" id="m2" name="m2[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m3" name="m3[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m4" name="m4[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m5" name="m5[]" value="0" size="3" required/></td>
+                <td><p id="pointsA">-</p></td>
+                <td><p id="pointsB">-</p></td>
+			</tr>
+         
+            <tr>
+                <td>						<!--// ajout 27/08/2020  -->
+						<input type="hidden" name="ligneMatch[]" value="180" />
+					    BRACHET Sébastien                </td>
+                <td>
+                    BONNEAU Catherine                </td>
+				<!-- ajout 26/08/2020  -->
+				<!--
+                <td>0 / 0</td>
+                <td>0 / 0</td>
+                <td>0 / 0</td>
+                <td>-</td>
+                <td>-</td>  -->
+				<td><input class="form-control" type="number" id="m1" name="m1[]" value="0" size="3" required/></td>
+                <td><input class="form-control" type="number" id="m2" name="m2[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m3" name="m3[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m4" name="m4[]" value="0" size="3" required/></td>
+			    <td><input class="form-control" type="number" id="m5" name="m5[]" value="0" size="3" required/></td>
+                <td><p id="pointsA">-</p></td>
+                <td><p id="pointsB">-</p></td>
+			</tr>
+                <tr>      
+				<!-- remplacer --- par 0 si erreur requête ?  -->		
+				<td colspan="2">Double</td>
+                <td><input class="form-control" type="number" id="d1" name="d1" value="0" size="3" required/> </td>
+                <td><input class="form-control" type="number" id="d2" name="d2" value="0" size="3" required/> </td>
+                <td><input class="form-control" type="number" id="d3" name="d3" value="0" size="3" required/> </td>
+                <td><input class="form-control" type="number" id="d4" name="d4" value="0" size="3" required/> </td>
+                <td><input class="form-control" type="number" id="d5" name="d5" value="0" size="3" required/> </td>
+                <td><p id="pointsA">-</p></td>
+                <td><p id="pointsB">-</p></td>
+        </tr>
+        <tr> 
+            <td colspan="7">Calculer le score final<input class="form-control" type="button" value="calcul" id="calcul" onclick="calculScore();"></p></td>
+            <td> <p id="scoreA" >0</td>
+            <td> <p id="scoreB" >0</td>
+        </tr>
+		
+    </table>

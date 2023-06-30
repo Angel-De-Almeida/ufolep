@@ -1,0 +1,31 @@
+footer {
+    background-color: #000f2e;
+    color: #ffffff;
+}
+
+footer hr {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.page-footer {
+    padding: 50px !important;
+}
+
+.footer-container {
+    background-color: #000f2e;
+    padding-top: 30px;
+    width: 100%;
+    color: #FFFFFF;
+}
+
+.link {
+    color: #ffffff !important;
+}
+
+.footer-text {
+    font-size: 0.85em;
+}
+
+.text-uppercase {
+    font-family: "Barlow Condensed", sans-serif;
+}
